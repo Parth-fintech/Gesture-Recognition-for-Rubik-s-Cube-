@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Env / secrets
+.env
+
+# MediaPipe model weights (large binary, download separately)
+*.task
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Footage that sometimes lands in the working dir while filming
+*.mp4
+*.mov
