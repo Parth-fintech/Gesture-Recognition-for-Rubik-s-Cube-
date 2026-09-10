@@ -310,7 +310,6 @@ def draw_puzzle(frame, Rg, half_edge, anim_state):
             pcol = tuple(int(min(255, v * sh + (255 - v * sh) * PILLOW_LIFT)) for v in col)
             cv2.fillPoly(frame, [pil], pcol)
 
-# ============================================================================
 #  GESTURE INTERACTION LAYER
 #
 #  The cube never has to be touched on screen: a virtual touchpad in the
@@ -320,9 +319,9 @@ def draw_puzzle(frame, Rg, half_edge, anim_state):
 #  is currently most camera-facing -> a circular "confirm" gesture that
 #  locks a tile -> a directional flick that becomes exactly one call into
 #  the SAME move_queue / start_move / finish_move pipeline above.
-# ============================================================================
 
-# --- Tunables ----------------------------------------------------- [TUNE] --
+
+# Tunables 
 SURF_HALF        = 1.0 + CUBIE_H     # true sticker surface plane (cube units)
 MIN_TANGENT      = 25.0    # px/rad: below this a layer is too edge-on to turn
 TANGENT_QUALITY  = 0.30    # fraction of the tangent that must survive screen
@@ -906,9 +905,9 @@ def draw_gesture_box(frame, ctrl, pad_hand, label):
     cv2.putText(frame, status, (BOX_X0, BOX_Y1 + 26),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.42, col, 1, cv2.LINE_AA)
 
-# ============================================================================
+
 #  Runtime  (guarded so the math above is importable for headless tests)
-# ============================================================================
+#
 if __name__ == "__main__":
 
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
