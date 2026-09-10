@@ -6,7 +6,6 @@ whole puzzle, your right hand aims at a virtual touchpad, pinches to lock
 a tile, and drags to turn the layer it belongs to- with the sticker
 following your finger around its real curved path in real time.
 
-![status](https://github.com/<Parth-fintech>/gesture-cube/actions/workflows/ci.yml/badge.svg)
 
 ## Controls
 
